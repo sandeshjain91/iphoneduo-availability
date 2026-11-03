@@ -24,7 +24,7 @@ jobs:
 
       - name: Run check
         env:
-          PART_NUMBER: ${{ vars.PART_NUMBER }}
+          PART_NUMBER: ${{ vars.PART_NUMBER || 'MK2E4ZA/A' }}
           LOCATION: ${{ vars.LOCATION }}
         run: python check.py
 

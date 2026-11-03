@@ -20,7 +20,7 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 
 
 def fetch(part, location):
-    qs = urllib.parse.urlencode({"pl": "true", "parts.0": part, "location": location})
+    qs = urllib.parse.urlencode({"fae": "true", "pl": "true", "parts.0": part, "location": location})
     url = f"https://www.apple.com/hk/shop/fulfillment-messages?{qs}"
     req = urllib.request.Request(url, headers={
         "User-Agent": UA,
